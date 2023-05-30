@@ -32,6 +32,6 @@ Based upon the predictions uploaded to kaggle, we achieved a R-squared score of 
 
 ## Next Steps
 
-The R-squared score of 0.72 indicates that our model accounts for 72% of the variance in the target prediction, however there are a few highly correlated variables which may cause overfitting.
+The R-squared score of 0.72 indicates that our model accounts for 72% of the variance in the target prediction, however we did not account for over/underfitting of the model based upon the distribution of training variables.
 
 To improve the accuracy of our prediction, I will continue by using the standard scaler feature in scikit and perform testing on non-linear models such as decision trees and random forest.

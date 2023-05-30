@@ -4,6 +4,8 @@ This project aims to predict housing prices using a multiple linear regression m
 
 ## Overview
 
+The dataset for this project was obtained from the The Ames Housing dataset, compiled by Dean De Cock for data science project use on Kaggle.
+
 In this project, we performed the following steps:
 
 - Data exploration: We analyzed the dataset to understand the available features and their relationships with the target variable (sale price).

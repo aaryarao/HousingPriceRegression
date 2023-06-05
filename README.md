@@ -12,7 +12,7 @@ In this project, we performed the following steps:
 - Data preprocessing: We handled missing values through median imputation and performed feature engineering to prepare the data for modeling.
 - Model selection and evaluation: We trained the models based upon selected features from the train.csv file and assessed the performance  using R-squared score and mean squared error.
 
-- Prediction: We made predictions on the test dataset using the selected model.
+- Prediction: We made predictions on the test dataset using the selected random forest model.
 
 ## Installation
 

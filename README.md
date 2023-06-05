@@ -27,13 +27,16 @@ To run this project, you need to have Python and the following libraries install
 
 The analysis and modeling process led to the following key results:
 
-The multiple linear regression model achieved an R-squared score of 0.76 on the training data.
-Scatter plots were created to visualize the relationships between selected features and the sale price.
+Upon completion of model tuning, the random forest and bagging models resulted in R2 scores of 0.97 and 0.983 respectively, indicating that our models accounted for ~97% of variance in the data, while the remaining ~3% may be attributed to inherent randomness or factors not included in the model.
 
-Based upon the predictions uploaded to kaggle, we achieved a R-squared score of 0.72 on the test data.
+The kaggle submission is evaluated upon RMSE and our random forest model received a score of 0.177.
 
 ## Next Steps
 
-The R-squared score of 0.72 indicates that our model accounts for 72% of the variance in the target prediction, however we did not account for over/underfitting of the model based upon the distribution of training variables.
+While we acheived a high R2 score and a submission score of 0.177, there are steps we can take to improve our models:
 
-To improve the accuracy of our prediction, I will continue by using the standard scaler feature in scikit and perform testing on non-linear models such as decision trees and random forest.
+*   The 'SalePrice' distribution is right skewed with multiple outliars. Our model performance would benefit from normalizing the sale price distribution and performing imputation or removal as necessary for the outliers.
+
+*   There are outliars in many of our selected features: ('OverallQual', 2), ('YearBuilt', 6), ('GarageArea', 7), ('TotalRms', 10), ('TotalSF', 11), ('GrLivArea', 16). To ensure that these values are not negatively influencing our predictions, testing should be performed after treating the missing values.
+
+*   The adaptive boosting model (ADAboost) used for gradient boosting did not result in a strong R2 score, even following model tuning. ADA boost is also sensitive to unneded features; I would like to include XGboost models in testing as they are regularized and less sensitive to overfitting in linear regression models.

@@ -10,7 +10,8 @@ In this project, we performed the following steps:
 
 - Data exploration: We analyzed the dataset to understand the available features and their relationships with the target variable (sale price).
 - Data preprocessing: We handled missing values through median imputation and performed feature engineering to prepare the data for modeling.
-- Model selection and evaluation: We trained the model based upon selected features from the train.csv file and assessed the performance of the multiple linear regression using R-squared score and mean squared error.
+- Model selection and evaluation: We trained the models based upon selected features from the train.csv file and assessed the performance  using R-squared score and mean squared error.
+
 - Prediction: We made predictions on the test dataset using the selected model.
 
 ## Installation

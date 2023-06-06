@@ -36,8 +36,8 @@ The kaggle submission is evaluated upon RMSE and our random forest model receive
 
 While we acheived a high R2 score and a submission score of 0.177, there are steps we can take to improve our models:
 
-*   The 'SalePrice' distribution is right skewed with multiple outliars. Our model performance would benefit from normalizing the sale price distribution and performing imputation or removal as necessary for the outliers.
+*   The 'SalePrice' distribution is right skewed with multiple outliers. Our model performance would benefit from normalizing the sale price distribution and performing imputation or removal as necessary for the outliers.
 
-*   There are outliars in many of our selected features: ('OverallQual', 2), ('YearBuilt', 6), ('GarageArea', 7), ('TotalRms', 10), ('TotalSF', 11), ('GrLivArea', 16). To ensure that these values are not negatively influencing our predictions, testing should be performed after treating the missing values.
+*   There are outliers in many of our selected features: ('OverallQual', 2), ('YearBuilt', 6), ('GarageArea', 7), ('TotalRms', 10), ('TotalSF', 11), ('GrLivArea', 16). To ensure that these values are not negatively influencing our predictions, testing should be performed after treating the missing values.
 
-*   The adaptive boosting model (ADAboost) used for gradient boosting did not result in a strong R2 score, even following model tuning. ADA boost is also sensitive to unneded features; I would like to include XGboost models in testing as they are regularized and less sensitive to overfitting in linear regression models.
+*   The adaptive boosting model (ADAboost) used for gradient boosting did not result in a strong R2 score, even following model tuning. ADA boost is highly sensitive to features; I would like to include XGboost models in testing as they are regularized and less sensitive to overfitting in linear regression models.
